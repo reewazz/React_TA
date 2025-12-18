@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  padding: 16px 64px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.navitem {
+  padding: 16px;
+}
