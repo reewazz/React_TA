@@ -14,7 +14,7 @@ function App(){
         <>
        {/* <Header/>
        <Navbar/> */}
-       {/* <Hero/>   */}
+       <Hero/>  
        <TextUtils/>
 
         </>

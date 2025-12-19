@@ -3,6 +3,7 @@ import { useState } from 'react'
 export function Hero (){
     const [count,setCount] = useState(0)
     const [show,setShow] = useState(false)
+    const [color,setColor] = useState('gray')
 
 
 return (
@@ -25,6 +26,11 @@ return (
                 show ? "hide" : "show"
             }
         </button>
+
+        <div style={{height:"80px",width:"80px" , borderRadius: "50%", background:`${color}`}}></div>
+        <button onClick={()=>setColor('red')}>red</button>
+        <button onClick={()=>setColor('blue')}>blue</button>
+        <button onClick={()=>setColor('yellow')}>yellow</button>
     </>
 )
 }
