@@ -1,5 +1,6 @@
  // @ts-ignore
  import Logo from '../assets/logooooooo.png'
+import Name from '../Name.jsx'
  import './Navbar.css'
  export function Navbar(){
     return(
@@ -17,6 +18,8 @@
             <div className="navitem">Home</div>
             <div className="navitem">Home</div>
         </div>
+            
+
      </div>
         </>
     )
