@@ -1,63 +1,77 @@
-import './Hero.css'
-import { ProductCard } from './ProductCard'
-export const Products  = ()=>{
-    const productValues = {
-image: "https://demo.templatesjungle.com/ultras/images/product-item1.jpg",
-name : "Full sleeve cover shirt",
-price : 400
-    }
-      const productValues2 = {
-image: "https://demo.templatesjungle.com/ultras/images/product-item2.jpg",
-name : "Half sleeve cover shirt",
-price : 200
-    }
-    
-    return(
-        <>
-        <div className="products">
+import "./Hero.css";
+import { ProductCard } from "./ProductCard";
+export const Products = () => {
 
-       <div className="cards">
-         {/* <div className="card">
-            <div className='image-border'>
-            <img src="https://demo.templatesjungle.com/ultras/images/product-item1.jpg" alt="" />
+    const todo = ['wake up','code', 'sleep']
+  const products = [
+    {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item1.jpg",
+      name: "Full sleeve cover shirt",
+      price: 300,
+    },
+    {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item2.jpg",
+      name: "Half sleeve cover shirt",
+      price: 200,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 700,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 800,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 400,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 900,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 100,
+    },
+      {
+      image: "https://demo.templatesjungle.com/ultras/images/product-item3.jpg",
+      name: "Hoodie",
+      price: 400,
+    },
 
-            </div>
-            <h2>Full sleeve cover shirt</h2>
-            <h4>$ 30.00</h4>
-        </div> <div className="card">
-            <div className='image-border'>
-            <img src="https://demo.templatesjungle.com/ultras/images/product-item1.jpg" alt="" />
+  ];
 
-            </div>
-            <h2>Full sleeve cover shirt</h2>
-            <h4>$ 30.00</h4>
-        </div> <div className="card">
-            <div className='image-border'>
-            <img src="https://demo.templatesjungle.com/ultras/images/product-item1.jpg" alt="" />
+const  isCheap = products.filter((item)=>item.price<500)
+  return (
+    <>
+      <div className="products">
+        <div className="cards">
 
-            </div>
-            <h2>Full sleeve cover shirt</h2>
-            <h4>$ 30.00</h4>
-        </div>
-         <div className="card">
-            <div className='image-border'>
-            <img src="https://demo.templatesjungle.com/ultras/images/product-item1.jpg" alt="" />
+            {[12,33,44,55,"string"].map((item,index)=> (
 
-            </div>
-            <h2>Full sleeve cover shirt</h2>
-            <h4>$ 30.00</h4>
-        </div> */}
-        <ProductCard value = {productValues}/>
-        <ProductCard value = {productValues2}/>
-        <ProductCard value = {productValues}/>
-        <ProductCard value = {productValues2}/>
-       
-        {/* <ProductCard value = {productValues}/>
+<h1>{item}</h1>
+            ))}
+         
+         {isCheap.map((samarpan,index)=>(
+
+ <ProductCard  value={samarpan} />
+ 
+         ))}
+         
+          {/* <ProductCard value={productValues2} />
+          <ProductCard value={productValues} />
+          <ProductCard value={productValues2} /> */}
+
+          {/* <ProductCard value = {productValues}/>
         <ProductCard value = {productValues}/> */}
-        
-       </div>
         </div>
-       
-        </>
-    )
-}
+      </div>
+    </>
+  );
+};
