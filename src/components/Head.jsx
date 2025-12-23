@@ -1,0 +1,23 @@
+import "./Head.css";
+export const Head = () => {
+  return (
+    <>
+      <div class="container">
+        <div class="todo-app">
+          <h2>
+            To-do List img <img src="./icon.png" />
+          </h2>
+          <div class="row">
+            <input type="text" id="input-box" placeholder="Add your text" />
+            <button onclick="addTask()">Add</button>
+          </div>
+          <ul id="list-container">
+            {/* <li class="checked">Task 1</li> */}
+            {/* <li>Task 2</li>
+            <li>Task 3</li> */}
+          </ul>
+        </div>
+      </div>
+    </>
+  );
+};

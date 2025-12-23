@@ -7,6 +7,8 @@ import Name from "./Name";
 import { PropsChild } from "./PropsChild";
 import { Products } from "./components/Products";
 import { ProductCard } from "./components/ProductCard";
+import { Head } from "./components/Head";
+import { Todolist } from "./components/Todolist";
 
 
 function App(){
@@ -39,6 +41,8 @@ console.log(name)
         <>
        {/* <Header/> */}
        <Navbar/>
+       <Head/>
+       <Todolist/>
        <h1>{name}</h1>
             {/* <ProductCard value = {userObject}/> */}
        {/* <Hero/>  
