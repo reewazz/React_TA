@@ -55,12 +55,12 @@ const  isCheap = products.filter((item)=>item.price<500)
 
             {[12,33,44,55,"string"].map((item,index)=> (
 
-<h1>{item}</h1>
+<h1 key={index}>{item}</h1>
             ))}
          
          {isCheap.map((samarpan,index)=>(
 
- <ProductCard  value={samarpan} />
+ <ProductCard key={index} value={samarpan} />
  
          ))}
          

@@ -4,6 +4,18 @@ import { MdDelete } from 'react-icons/md'
 import { IoAddCircleSharp } from 'react-icons/io5'
 
 export function Todolist (){
+    const array = [
+        {
+            id: 1,
+            title: "hellow",
+            time : "9:00 am"
+        },
+        {
+            id: 2,
+            title: "Mail Quotation",
+            time : "10:00 am"
+        }
+    ]
     return(
         <>
            <div className="cardContainer">
@@ -45,7 +57,19 @@ export function Todolist (){
                     </div>
 
                     <div className="cardlists">
-
+{array.map ((item,index)=>
+  <div className="dolist">
+                            <div className="checkbox">
+                                <input type="checkbox" name='check'/>
+                            </div>
+                            <div className="dolistTitle">
+                                <span className="listTitle">{item.title}</span>
+                            </div>
+                            <div className="dolistTime">
+                                <span className="listTime">{item.time}</span>
+                            </div>
+                        </div>
+)}
                         <div className="dolist">
                             <div className="checkbox">
                                 <input type="checkbox" name='check'/>

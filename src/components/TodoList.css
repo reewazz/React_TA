@@ -30,10 +30,11 @@
     align-items: center;
     gap: 30px; */
   padding: 25px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  align-items: center;
+  /* grid-template-columns: repeat(3, 1fr); */
   justify-content: space-between;
-  gap: 30px;
+  /* gap: 30px; */
   /* justify-items: center; */
   /* text-align: center; */
 }
