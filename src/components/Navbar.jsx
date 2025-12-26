@@ -1,5 +1,6 @@
  // @ts-ignore
- import Logo from '../assets/logooooooo.png'
+ import { Link } from 'react-router'
+import Logo from '../assets/logooooooo.png'
 import Name from '../Name.jsx'
  import './Navbar.css'
  export function Navbar(){
@@ -11,12 +12,14 @@ import Name from '../Name.jsx'
             {/* <img src="https://demo.templatesjungle.com/ultras/images/main-logo.png" alt="" /> */}
         </div>
         <div className="nav-items">
-            <div className="navitem">Home</div>
-            <div className="navitem">Home</div>
-            <div className="navitem">Home</div>
-            <div className="navitem">Home</div>
-            <div className="navitem">Home</div>
-            <div className="navitem">Home</div>
+            <a href=""></a>
+          
+            <Link to= '/' className="navitem">Home</Link>
+            <Link to="/products" className="navitem">Products</Link>
+            <Link to="/todo" className="navitem">Todo</Link>
+          
+            <Link to = "/hello">jpt</Link>
+        
         </div>
             
 
