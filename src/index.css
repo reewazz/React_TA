@@ -5,3 +5,19 @@
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
 }
+
+.details-main {
+  display: flex;
+  padding: 16px 64px;
+  gap: 100px;
+
+  .details-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  p {
+    color: red;
+  }
+}

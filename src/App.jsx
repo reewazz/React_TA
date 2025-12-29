@@ -14,6 +14,7 @@ import { Route, Routes } from "react-router";
 import { Footer } from "./Footer.jsx";
 import { NotFound } from "./components/NotFound.jsx";
 import { Todo } from "./components/Todo.jsx";
+import { ProductDetails } from "./components/ProductDetails.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -30,10 +31,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/product-details/:id" element={<ProductDetails />} />
         <Route path = "/todo" element = {<Todo/>} >
 
         <Route path = "kishor" element = {<Todolist/>} />
         <Route path = "samarpan" element = {<Head/>} />
+
         </Route>
         
         <Route path = "/*" element = {<NotFound/>}/>
