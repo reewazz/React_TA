@@ -54,6 +54,11 @@ export const Products = ({count}) => {
 
   ];
 
+ 
+
+
+
+
 const  isCheap = products.filter((item)=>item.price<500)
   return (
     <>

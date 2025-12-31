@@ -15,6 +15,8 @@ import { Footer } from "./Footer.jsx";
 import { NotFound } from "./components/NotFound.jsx";
 import { Todo } from "./components/Todo.jsx";
 import { ProductDetails } from "./components/ProductDetails.jsx";
+import TryCatch from "./TryCatch.jsx";
+import News from "./components/News.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,13 +26,16 @@ function App() {
     image: "url",
     price: 200,
   };
+  
 
   return (
     <>
     <Navbar/>
+    {/* <TryCatch/> */}
       <Routes>
         <Route path="/" element={<Hero />} />
         <Route path="/products" element={<Products />} />
+        <Route path="/news" element={<News />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
         <Route path = "/todo" element = {<Todo/>} >
 

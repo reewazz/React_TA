@@ -21,3 +21,26 @@
     color: red;
   }
 }
+
+.news {
+  display: grid;
+  padding: 16px 64px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.newscard {
+  padding: 16px;
+  border: 0.7px solid rgb(228, 225, 225);
+}
+
+.news-image {
+  height: 400px;
+  width: 400px;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
