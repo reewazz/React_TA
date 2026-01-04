@@ -59,9 +59,9 @@ const [query,setQuery] = useState("apple")
 const [category,setCategory] = useState("technology")
 
 const fetchArticles = async ()=> {
-    // const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&from=2025-11-30&sortBy=publishedAt&apiKey=0ea95d274ed24da2b72950537e16028d`)
+    const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=0ea95d274ed24da2b72950537e16028d`)
 console.log("it is running again")
-    const response = await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&from=2025-11-30&sortBy=publishedAt&apiKey=0ea95d274ed24da2b72950537e16028d`)
+    // const response = await fetch(`https://newsapi.org/v2/top-headlines?category=${category}&from=2025-11-30&sortBy=publishedAt&apiKey=0ea95d274ed24da2b72950537e16028d`)
 //  console.log(response,"response")
     const data = await response.json()
 setMyArticles(data.articles)

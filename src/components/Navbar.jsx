@@ -16,7 +16,7 @@ import Name from '../Name.jsx'
           
             <Link to= '/' className="navitem">Home</Link>
             <Link to="/products" className="navitem">Products</Link>
-            <Link to="/todo" className="navitem">Todo</Link>
+            <Link to="/form" className="navitem">Todo</Link>
             <Link to="/news" className="navitem">News</Link>
           
             {/* <Link to = "/hello">jpt</Link> */}

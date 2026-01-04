@@ -17,6 +17,7 @@ import { Todo } from "./components/Todo.jsx";
 import { ProductDetails } from "./components/ProductDetails.jsx";
 import TryCatch from "./TryCatch.jsx";
 import News from "./components/News.jsx";
+import NewsForm from "./components/NewsForm.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -37,7 +38,7 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/news" element={<News />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
-        <Route path = "/todo" element = {<Todo/>} >
+        <Route path = "/form" element = {<NewsForm/>} >
 
         <Route path = "kishor" element = {<Todolist/>} />
         <Route path = "samarpan" element = {<Head/>} />

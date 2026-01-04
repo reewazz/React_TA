@@ -1,13 +1,43 @@
 import './Hero.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 export function Hero (){
     const [count,setCount] = useState(0)
     const [show,setShow] = useState(false)
     const [color,setColor] = useState('gray')
+const [news,setNews] = useState([])
 
+
+useEffect(()=>{
+    const firstNews = localStorage.getItem("news")
+const value  = firstNews && JSON.parse(firstNews)
+  setNews(value)
+},[])
+console.log(news,"news in hero")
 
 return (
     <>
+
+    {news?.map((item,index)=>(
+        <div key={index} style={{margin:"16px 64px"}}>
+         <div>
+               {item.title}
+         </div>
+
+<img src={item.image} alt="" />
+        <div>
+                {item.description}
+        </div>
+       <div>
+             {item.author}
+       </div>
+         <div>
+               {item.category}
+         </div>
+
+            </div>
+    ))
+}
+
     <div className="hero">
       
        <div className='counter'>
