@@ -18,7 +18,7 @@ export function Todolist (){
     ]
     return(
         <>
-           <div className="cardContainer">
+           <div className="mx-auto my-0 h-150">
                 <div className="taskTitle">
                     <div className="topsection">
                         <div className="menu">
@@ -60,7 +60,7 @@ export function Todolist (){
 {array.map ((item,index)=>
   <div className="dolist">
                             <div className="checkbox">
-                                <input type="checkbox" name='check'/>
+                                <input type="checkbox" name='check' className= "cursor-pointer scale "/>
                             </div>
                             <div className="dolistTitle">
                                 <span className="listTitle">{item.title}</span>
@@ -72,7 +72,7 @@ export function Todolist (){
 )}
                         <div className="dolist">
                             <div className="checkbox">
-                                <input type="checkbox" name='check'/>
+                                <input type="checkbox" name='check' className= "cursor-pointer scale  "/>
                             </div>
                             <div className="dolistTitle">
                                 <span className="listTitle">Mail Quotation</span>

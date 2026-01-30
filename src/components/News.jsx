@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { NewsCard } from './NewsCard';
+import { useSelector } from 'react-redux';
 
 const News = () => {
      const news = [
@@ -58,6 +59,7 @@ const [myArticles,setMyArticles] = useState([])
 const [query,setQuery] = useState("apple")
 const [category,setCategory] = useState("technology")
 
+
 const fetchArticles = async ()=> {
     const response = await fetch(`https://newsapi.org/v2/everything?q=${query}&sortBy=publishedAt&apiKey=0ea95d274ed24da2b72950537e16028d`)
 console.log("it is running again")
@@ -82,7 +84,8 @@ fetchArticles()
             <button onClick={()=>setCategory("crypto")}>crypto</button>
             <button onClick={()=>setCategory("politics")}>politics</button>
         </div>
-    <div className='news'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4  '>
+        
         {myArticles.map((item,index)=>(
 
         <NewsCard key={index} value={item}/>

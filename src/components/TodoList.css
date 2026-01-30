@@ -78,7 +78,7 @@ a:hover {
 
 input[type="checkbox"] {
   transform: scale(1.5);
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .manageList {
@@ -92,3 +92,5 @@ input[type="checkbox"] {
   font-size: 28px;
   color: #3b9a9c;
 }
+
+
