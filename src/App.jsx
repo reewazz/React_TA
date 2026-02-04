@@ -23,6 +23,9 @@ import Login from "./pages/Login.jsx";
 import Dashboard from "./pages/Dashboard/Dashboard.jsx";
 import PrivateRoutes from "./helpers/PrivateRoutes.js";
 import AddBlogs from "./components/dashboard/AddBlogs.jsx";
+import AddCategory from "./components/dashboard/AddCategory.jsx";
+import AppLayout from "./layouts/AppLayout.jsx";
+import AdminLayout from "./layouts/AdminLayout.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -36,21 +39,15 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+  
 
   
-    {/* <TryCatch/> */}
+   
       <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/dashboard" element={
-            <PrivateRoutes>
-                <Dashboard/>
-            </PrivateRoutes> } >
-<Route path = "createblog" element = {<AddBlogs/>}/>
-<Route path = "category" element = {<h1>This is category  section </h1>}/>
-            </Route>
-        <Route path="/products" element={<Products />} />
-        <Route path="/news" element={<News />} />
+        <Route path="/" element={<AppLayout />} >
+        <Route path="try" element= {<h1>this is nested route</h1>}/>
+          <Route path="products" element={<Products />} />
+          <Route path="news" element={<News />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />
         <Route path = "/form" element = {<Todolist/>} >
 
@@ -65,8 +62,20 @@ function App() {
 
         
         <Route path = "/*" element = {<NotFound/>}/>
+        </Route>
+
+
+
+        <Route path="/dashboard" element={<AdminLayout/>} >
+
+
+<Route path = "createblog" element = {<AddBlogs/>}/>
+<Route path = "category" element = {<AddCategory/>}/>
+            </Route>
+      
+        
       </Routes>
-     <Footer/>
+
     </>
   );
 }

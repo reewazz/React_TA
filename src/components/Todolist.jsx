@@ -2,6 +2,7 @@ import { IoIosMenu, IoMdNotificationsOutline } from 'react-icons/io'
 import './TodoList.css'
 import { MdDelete } from 'react-icons/md'
 import { IoAddCircleSharp } from 'react-icons/io5'
+import { Outlet } from 'react-router'
 
 export function Todolist (){
     const array = [
@@ -122,6 +123,7 @@ export function Todolist (){
                     
                 </div>
            </div>
+           <Outlet/>
         </>
     )
 }
