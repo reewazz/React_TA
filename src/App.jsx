@@ -45,7 +45,7 @@ function App() {
    
       <Routes>
         <Route path="/" element={<AppLayout />} >
-        <Route path="try" element= {<h1>this is nested route</h1>}/>
+        <Route path="hero" element= {<Hero/>}/>
           <Route path="products" element={<Products />} />
           <Route path="news" element={<News />} />
         <Route path="/product-details/:id" element={<ProductDetails />} />

@@ -10,7 +10,6 @@ const AddBlogs = () => {
     initialValues: {
       title: "",
       author: "",
-      image: "",
       description: "",
       category: "",
     },
@@ -23,6 +22,7 @@ const AddBlogs = () => {
 
   const [categories, setCategories] = useState([]);
   const [blogs, setBlogs] = useState([]);
+  const [file,setFile] = useState(null)
   const getAllCategory = async () => {
     const res = await axios.get("http://localhost:8000/category/getAll");
     setCategories(res.data);
@@ -38,7 +38,16 @@ const AddBlogs = () => {
     getAllBlogs()
   }, []);
 
-  console.log(form.values);
+  
+
+const formData = new FormData()
+
+
+Object.entries(form.values).forEach(([key, value]) => {
+  formData.append(key, value);
+});
+
+formData.append('blogImage',file)
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +58,7 @@ const AddBlogs = () => {
 
     const res = await axios.post(
       "http://localhost:8000/blog/create",
-      form.values,
+      formData,
     );
     console.log(res);
     form.reset();
@@ -92,6 +101,8 @@ const AddBlogs = () => {
         ))}
       </select> */}
 
+
+<input type="file" onChange={(e)=>setFile(e.target.files[0])} />
       <Select
         // data={[
         //   { label: "sports", value: "abc" },
