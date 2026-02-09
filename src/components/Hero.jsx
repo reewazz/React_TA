@@ -1,30 +1,47 @@
+import { RiInsertColumnRight } from 'react-icons/ri'
 import './Hero.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { Outlet } from 'react-router'
+import axios from 'axios'
 export function Hero (){
-    const [count,setCount] = useState(0)
-    const [show,setShow] = useState(false)
+    
+const [news,setNews] = useState([])
+const [file,setFile] = useState([])
 
+
+useEffect(()=>{
+    const firstNews = localStorage.getItem("news")
+const value  = firstNews && JSON.parse(firstNews)
+  setNews(value)
+},[])
+
+
+
+
+const upload = async ()=> {
+
+    const formdata = new FormData()
+
+for(let i =0; i<file.length; i++){
+    formdata.append("image", file[i])
+}
+    const res = await axios.post('http://localhost:8000/upload',formdata)
+    console.log(res)
+}
+
+console.log(news,"news in hero")
 
 return (
-    <>
-    <div className="hero">
-      
-       <div className='counter'>
-        <button onClick={()=>setCount(count-1)}>-</button>
-  <h1>  {count}</h1> 
-  <button onClick={()=>setCount(count+1)} >+</button>
-  <button onClick={()=>setCount(0)}>reset</button>
+    <div className = 'h-screen p-8'>
+        <input type="file"   multiple accept="image/*" onChange={(e)=>setFile(e.target.files)} />
+<button className='bg-blue-400' onClick={upload}>addd</button>
 
-       </div>
-       <div>
-       </div>
+
+   
+
+
+   
+
     </div>
-        <input type={show ? "text" : "password"} />
-        <button onClick={()=>setShow(!show)}> 
-            {
-                show ? "hide" : "show"
-            }
-        </button>
-    </>
 )
 }

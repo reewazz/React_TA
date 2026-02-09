@@ -13,3 +13,29 @@ button {
   display: flex;
   gap: 32px;
 }
+
+.products {
+  padding: 16px 64px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.image-border {
+  border: 1px solid gray;
+  padding: 16px;
+  width: 339px;
+  height: 417px;
+}
+
+.image-border img {
+  height: 100%;
+  width: 100%;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
